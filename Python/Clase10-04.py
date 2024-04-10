@@ -16,3 +16,7 @@ else:
     CLASIFICACION="OBESIDAD"
     
 print(f"Usuario: {nombreUsuario}\nPeso: {pesoUsuario}\nEstatura: {estaturaUsuario}\n IMC: {imc}. Su clasificacion es: {CLASIFICACION}")
+
+# git config --global user.email "rica.sanchezs@duocuc.cl"
+# git config --global user.name "Roony11"
+# git commit -m "Mensaje"
