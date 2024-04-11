@@ -11,10 +11,12 @@ def espera_tecla():
 
 def mostrar_menu(nombres):
     os.system("cls")
-    print("Menú:")
+    print("Menú:)")
     for i, nombre in enumerate(nombres, start=1):
         print(f"{i}.- {nombre}")
-    print("\n0.- Salir")
+    print("\n8.- Atras")
+    print("9.- Siguiente")
+    print("0.- Salir")
 
 def accion_menu1():
     while True:
@@ -31,6 +33,12 @@ def accion_menu1():
                     numero2 = float(input("Ingresa número 2:\n"))
 
                     print(f"La suma de {numero1} + {numero2} es {numero1+numero2}")
+                elif (opcion==8):
+                    print("Atras.")
+                    espera_tecla()
+                elif (opcion==9):
+                    print("Siguiente")
+                    espera_tecla()
             else:
                 print("Selecciona una opción valida!")
                 espera_tecla()
@@ -51,6 +59,12 @@ def accion_menu2():
                 if (opcion==1):
                     nombre=input("Ingresa tu nombre:\n")
                     print(f"Saludos {nombre}")
+                elif (opcion==8):
+                    print("Atras.")
+                    espera_tecla()
+                elif (opcion==9):
+                    print("Siguiente")
+                    espera_tecla()
                 else:
                     print("Selecciona una opción valida!")
                     espera_tecla()
@@ -71,6 +85,12 @@ def accion_menu3():
                 if (opcion==1):
                     edad=float(input("Ingresa tu edad:\n"))
                     print(f"Tu edad es: {edad}")
+                elif (opcion==8):
+                    print("Atras.")
+                    espera_tecla()
+                elif (opcion==9):
+                    print("Siguiente")
+                    espera_tecla()
             else:
                 print("Selecciona una opción valida!")
                 espera_tecla()
@@ -117,6 +137,12 @@ while True:
         if (1 <= opcion <= len(my_list)):
             print(f"Seleccionaste: {my_list[opcion-1]}")
             accion_menup(opcion)
+        elif (opcion==8):
+            print("Atras.")
+            espera_tecla()
+        elif (opcion==9):
+            print("Siguiente")
+            espera_tecla()
         else:
             print("Selecciona una opción valida!")
             espera_tecla()
