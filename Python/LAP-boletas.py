@@ -81,7 +81,7 @@ print(f''' ** Liquidación de: {nombre} **
  + Liquido a pagar: {(valor_hora*horas_trabajadas)*(0.8)}
  +-------------------------------------------------------------+
         ''')
-if (sexo=="H"):
+if (sexo=="H" or sexo=="h"):
     print(f"+ Sexo: {sexo}, Edad: {edad}, Tiempo a jubilacion: {65-edad}")
-elif (sexo=="M"):
+elif (sexo=="M" or sexo=="m"):
     print(f"+ Sexo: {sexo}, Edad: {edad}, Tiempo a jubilacion: {60-edad}")
