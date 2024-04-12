@@ -29,7 +29,6 @@ while True:
     sexo = input("Ingresa tu sexo (H/M)\n")
     
     if ((sexo=="h") or (sexo=="H") or (sexo=="m") or (sexo=="M")):
-        print(f"{sexo}")
         break
     else:
         print("Ingresa una opción valida!")
@@ -40,6 +39,7 @@ while True:
     edad = input("Ingresa tu edad.\n")
 
     if (edad.isdigit()):
+        edad_entera = int(edad)
         break
     else:
         print("Ingresa números enteros.\n")
@@ -81,8 +81,8 @@ print(f''' ** Liquidación de: {nombre} **
  +-------------------------------------------------------------+
         ''')
 if (sexo=="H" or sexo=="h"):
-    jubilacion=65-edad
+    jubilacion=65-edad_entera
     print(f"+ Sexo: {sexo}, Edad: {edad}, Tiempo a jubilacion: {jubilacion}")
 elif (sexo=="M" or sexo=="m"):
-    jubilacion=60-edad
+    jubilacion=60-edad_entera
     print(f"+ Sexo: {sexo}, Edad: {edad}, Tiempo a jubilacion: {jubilacion}")
