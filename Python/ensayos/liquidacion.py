@@ -18,8 +18,9 @@ while True:
     matriz_datos.append(nueva_fila)
     
     # Probemos la matriz
-    for fila in matriz_datos:
-        print(fila)
+    if(len(matriz_datos)>1):
+        for fila in matriz_datos:
+            print(fila)
 
     input("Presiona ENTER para continuar")
 

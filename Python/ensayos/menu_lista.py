@@ -2,7 +2,7 @@
 
 def mostrar_menu(nombres):
     print("Menú:")
-    for i, nombres in enumerate(nombres, start=1):
+    for i, nombre in enumerate(nombres, start=1):
         print(f"{i}. {nombre}")
     print("0. Salir")
 
