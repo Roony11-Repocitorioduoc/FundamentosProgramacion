@@ -29,7 +29,6 @@ while True:
     sexo = input("Ingresa tu sexo (H/M)\n")
     
     if ((sexo=="h") or (sexo=="H") or (sexo=="m") or (sexo=="M")):
-        sexo.upper()
         print(f"{sexo}")
         break
     else:
@@ -82,6 +81,8 @@ print(f''' ** Liquidación de: {nombre} **
  +-------------------------------------------------------------+
         ''')
 if (sexo=="H" or sexo=="h"):
-    print(f"+ Sexo: {sexo}, Edad: {edad}, Tiempo a jubilacion: {65-edad}")
+    jubilacion=65-edad
+    print(f"+ Sexo: {sexo}, Edad: {edad}, Tiempo a jubilacion: {jubilacion}")
 elif (sexo=="M" or sexo=="m"):
-    print(f"+ Sexo: {sexo}, Edad: {edad}, Tiempo a jubilacion: {60-edad}")
+    jubilacion=60-edad
+    print(f"+ Sexo: {sexo}, Edad: {edad}, Tiempo a jubilacion: {jubilacion}")
