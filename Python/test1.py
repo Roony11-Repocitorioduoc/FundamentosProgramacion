@@ -45,7 +45,7 @@ def ingresar_usuario():
 
 # Funcion muestra un menu a partir de los items de una lista
 def mostrar_menu(lista):
-    for i, opcion in enumerate(lista, start=1): #Enumera los datos de la lista menu
+    for i, opcion in enumerate(lista, start=1): #Enumera los datos de la lista menu y les asigna un numero parte en el 1
         print(f"{i}.- {opcion}") # Crea el menu
     print("\n0.- Salir.") # 0 Salir
     
