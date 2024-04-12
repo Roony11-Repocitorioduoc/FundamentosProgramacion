@@ -66,7 +66,7 @@ while True:
     
     
 
-
+os.system("cls")
 
 print(f''' ** Liquidación de: {nombre} **
  +-   Tipo        -+-           Haberes           -+-           Descuentos             -+
