@@ -16,7 +16,6 @@ while True:
                 nueva_fila.append(float(input(f"Ingrese su {lista_caracteres[columna].lower()}")))
 
     matriz_datos.append(nueva_fila)
-    break
     
     # Probemos la matriz
     for fila in matriz_datos:

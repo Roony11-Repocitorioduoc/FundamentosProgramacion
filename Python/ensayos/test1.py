@@ -16,14 +16,24 @@ matriz = []
 # Funcion mostrar matriz
 def mostrar_matriz(matriz):
     for fila in matriz:
-        print(matriz)
+        print(fila)
     
     esperar_tecla(1)
 
 # Funcion de ingreso de usuario
 def ingresar_usuario():
     while True:
-        continuar = input("Deseas agregar datos? (s para continuar)")
+        nueva_fila=[]
+
+        for columna in range(n_columnas):
+            if (len(matriz)==0):
+                nueva_fila.append(lista[columna])
+            else:
+                nueva_fila.append(input(f"Ingrese su {lista[columna].lower()}"))
+
+        matriz.append(nueva_fila)
+        break
+        '''continuar = input("Deseas agregar datos? (s para continuar)")
         
         if (continuar.lower()!="s"):
             break
@@ -41,7 +51,8 @@ def ingresar_usuario():
                     nueva_fila.append(columna)
                 
         # Ingresa la fila de datos a la matriz
-        matriz.append(nueva_fila)
+        matriz.append(nueva_fila) '''
+
 
 # Funcion muestra un menu a partir de los items de una lista
 def mostrar_menu(lista):
