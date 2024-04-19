@@ -119,7 +119,11 @@ Subtotal: {cantidad*precio}, , Medio de pago: {medio_pago[mpago-1]}
 """)
 if (efectivo):
     if(montoabonado!=(cantidad*precio)):
-        print(f"Vuelto: ${montoabonado-(cantidad*precio)}")
+        print(f"Monto abonado: ${montoabonado}")
+        if (mayorista):
+            print(f"Vuelto: ${montoabonado-(cantidad*precio*0.9)}")
+        else:
+            print(f"Vuelto: ${montoabonado-(cantidad*precio)}")
     if (mayorista):
         print(f"Descuento: ${cantidad*precio*0.1}\nTotal: ${cantidad*precio*0.9}")
 else:
