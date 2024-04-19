@@ -53,7 +53,6 @@ while True:
             break
         else:
             precio=precio_detalle[seleccion_producto-1]
-            mayorista=False
             break
     else:
         print(mensaje_numero)
@@ -91,7 +90,6 @@ while True:
                 efectivo=True
                 break
             else:
-                efectivo=False
                 break
         else:
             print(mensaje_outindex)
