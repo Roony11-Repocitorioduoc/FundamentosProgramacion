@@ -18,6 +18,7 @@ montoabonado=0 # solo si la compra es con efectivo se le dice al cliente con cua
 mayorista=False # define si es mayorista la compra
 efectivo=False # define si es en efectivo el pago, caso contrario es débito
 
+
 while True:
     time.sleep(1)
     os.system("cls")
@@ -77,7 +78,9 @@ while True:
     mpago = input(f"""Ingresa el medio de pago:
 1. {medio_pago[0]}
 2. {medio_pago[1]}
-\n""")
+""")
+    if (mayorista):
+        print(f"Si pagas con {medio_pago[0]}, obtendras un 10$ de descuento al final de tu boleta\n")
     
     if(mpago.isdigit()):
         mpago=int(mpago)
