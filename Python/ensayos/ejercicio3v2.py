@@ -103,11 +103,15 @@ while True:
 if (efectivo):
     while True:
         os.system("cls")
-        montoabonado = input(f"Ingrese la cantidad que desea abonar\n Subtotal: ${cantidad*precio}\n")
+        if (mayorista):
+            print(f"Subtotal: ${cantidad*precio*0.9}\n")
+        else:
+            print(f"Subtotal: ${cantidad*precio}")
+        montoabonado = input(f"Ingrese la cantidad que desea abonar\n")
         
         if (montoabonado.isdigit):
             montoabonado=int(montoabonado)
-            if (montoabonado<(precio*cantidad)):
+            if (montoabonado<=(precio*cantidad)):
                 print("No es suficiente dinero!\n")
                 input("\n Presiona ENTER para continuar")
             else:
@@ -130,6 +134,8 @@ if (efectivo):
             print(f"Vuelto: ${montoabonado-(cantidad*precio)}")
     if (mayorista):
         print(f"Descuento: ${cantidad*precio*0.1}\nTotal: ${cantidad*precio*0.9}")
+    else:
+        print(f"Total: ${cantidad*precio}")
 else:
     print(f"Total: ${cantidad*precio}")
 
