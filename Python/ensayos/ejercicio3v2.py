@@ -74,13 +74,14 @@ input("\n Presiona ENTER para continuar")
 
 while True:
     os.system("cls")
-
+    
+    if (mayorista):
+        print(f"Si pagas con {medio_pago[0]}, obtendras un 10$ de descuento al final de tu boleta\n")
+        
     mpago = input(f"""Ingresa el medio de pago:
 1. {medio_pago[0]}
 2. {medio_pago[1]}
 """)
-    if (mayorista):
-        print(f"Si pagas con {medio_pago[0]}, obtendras un 10$ de descuento al final de tu boleta\n")
     
     if(mpago.isdigit()):
         mpago=int(mpago)
