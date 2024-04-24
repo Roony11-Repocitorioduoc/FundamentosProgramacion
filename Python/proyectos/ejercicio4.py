@@ -61,7 +61,7 @@ def registrar_usuario(nombre, clave):
     print(f"Usuario: {nombre} creado satisfactoriamente")
     time.sleep(1)
 
-def main_llamada():
+def main_llamada(listanumero):
     while True:
         os.system("cls")
         mostrar_menu(menu_llamada)
@@ -73,6 +73,7 @@ def main_llamada():
         if (opcion_llamada==0):
             break
         elif (opcion_llamada==1):
+            os.system("cls")
             if (len(numeros)==0):
                 textotiempo(1, "Debe de haber almenos un número registrado en el sistema")
             else:
@@ -81,7 +82,7 @@ def main_llamada():
             
                 opcion_numero = seleccion_menu(numeros, opcnumero)
             
-                print(f"Llamando a: +56{numeros[opcion_numero]}")
+                textotiempo(2, f"Llamando a: {numeros[opcion_numero-1]}")
         elif (opcion_llamada==2):
             while True:
                 os.system("cls")
@@ -92,10 +93,14 @@ def main_llamada():
                     totaln+=1
         
                 if (totaln==9):
-                    textotiempo(2, f"Número: +56{registro_numero} satisfactoriamente guardado")
-                    break
+                    if (registro_numero[0]=="9" or registro_numero[0]=="2"):
+                        textotiempo(2, f"Número: {registro_numero} satisfactoriamente guardado")
+                        listanumero.append(registro_numero)
+                        break
+                    else:
+                        textotiempo(1, "Ingresa un número que empiece por 9 o 2!")
                 else:
-                    textotiempo(1, "Ingresa un número de un total de 9 digitos")
+                    textotiempo(1, "Ingresa un número de un total de 9 digitos!")
             
             
 def main_usuario():
@@ -110,7 +115,7 @@ def main_usuario():
         if (opcion_elegidau==0):
             break
         elif (opcion_elegidau==1):
-                main_llamada()
+                main_llamada(numeros)
         elif (opcion_elegidau==2):
             print("Menu correo") 
             time.sleep(1)
