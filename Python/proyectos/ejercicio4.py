@@ -5,6 +5,8 @@ menu_principal = ["Iniciar Sesión", "Registrar Usuario"]
 menu_usuario = ["Realizar Llamada", "Enviar Correo Electrónico"]
 menu_llamada = ["Llamar Número", "Registrar Número"]
 
+# proximamente guardar y cargar elementos desde un txt idealmente hacia estas listas
+
 usuarios = []
 claves = []
 
@@ -156,7 +158,3 @@ def main():
                 registrar_usuario(nusuario, nclave)
 
 main()
-
-
-
-
