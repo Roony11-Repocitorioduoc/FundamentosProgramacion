@@ -124,10 +124,10 @@ while True:
         if (control_codigo==1):
             if (control_venta==1):
                 descuento=0.9
-                stringdescuento = "Codido de descuento (10%)"
+                stringdescuento = f"Codido de descuento (10%) - Monto: ${round(precio*cantidad*(1-descuento), 0)}" # truncado a 0 decimales!
             elif (control_venta==2 or control_venta==3):
                 descuento=0.95
-                stringdescuento = "Codigo de descuento (5%)"
+                stringdescuento = f"Codigo de descuento (5%) - Monto: ${round(precio*cantidad*(1-descuento), 0)}" # truncado a 0 decimales!
         elif (control_codigo==2):
             stringdescuento=" "
 
