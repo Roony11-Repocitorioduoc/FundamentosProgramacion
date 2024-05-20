@@ -18,7 +18,9 @@ nombre_old = ""
 edad = 0
 edad_old = 0
 peso = 0.0
+peso_old = 0.0
 estatura = 0.0
+estatura_old = 0.0
 imc = 0.0
 categorizacion = ""
 ## Menús
@@ -34,7 +36,7 @@ Selecciona la accion que deseas ejecutar a continuación (1-5)
 1. Ingresar usuario
 2. Modificar usuario
 3. Borrar usuario
-4. Ver estadísticas
+4. Ver usuarios
 5. Salir
 
 Ingresa tu opción:
@@ -200,11 +202,60 @@ while True:
                     time.sleep(1)
             
             
-            # Cambio de nombre
             edades.pop(index)
             edades.insert(index, edad)
             print(f"La edad {edad_old} se a cambiado satisfactoriamente a {edad}")
             time.sleep(1)        
+        elif (control_modificacion==3):
+            os.system("cls")
+            
+            peso_old = pesos[index]
+            estatura_old = estaturas[index]
+            
+            while True:
+                try:
+                    peso = float(input(f"Ingresa el peso que deseas colocarle al usuario\n"))
+                    
+                    if (peso>0):
+                        break
+                    else:
+                        print("Ingresa un peso valida")
+                        time.sleep(1)
+                except:
+                    print(mensaje_valueerror)
+                    time.sleep(1)
+            
+            
+            pesos.pop(index)
+            pesos.insert(index, peso)
+            
+            imc = peso/estatura_old**2
+            
+            if imc<16:
+                categorizacion="Infrapeso: Delgadez severa"
+            elif 16<=imc<17:
+                categorizacion="Infrapeso: Delgadez moderada"
+            elif 17<=imc<18.5:
+                categorizacion="Infrapeso: Delgadez aceptable"
+            elif 18.5<=imc<25:
+                categorizacion="Peso nomral"
+            elif 25<=imc<30:
+                categorizacion="Sobrepeso"
+            elif 30<=imc<35:
+                categorizacion="Obeso: Tipo I"
+            elif 35<=imc<40:
+                categorizacion="Obeso: Tipo II"
+            elif 40<=imc:
+                categorizacion="Obeso: Tipo III"
+            
+            imc_usuarios.pop(index)
+            imc_usuarios.insert(index, round(imc))
+            
+            clasificacion_usuarios.pop(index)
+            clasificacion_usuarios.insert(index, categorizacion)
+            
+            print(f"El peso {peso_old} se a cambiado satisfactoriamente a {peso}")
+            time.sleep(1) 
         
         
     elif (control_principal==3):
