@@ -11,6 +11,7 @@ clasificacion_usuarios = []
 # Variables
 edadminima = 0
 index = 0
+cantidad_usuarios = 0
 ## Usuarios
 nombre = ""
 nombre_old = ""
@@ -18,6 +19,8 @@ edad = 0
 edad_old = 0
 peso = 0.0
 estatura = 0.0
+imc = 0.0
+categorizacion = ""
 ## Menús
 control_principal = 0
 control_modificacion = 0
@@ -108,13 +111,31 @@ while True:
                 print(mensaje_valueerror)
                 time.sleep(1)
                 
+        imc = peso/estatura**2
         
+        if imc<16:
+            categorizacion="Infrapeso: Delgadez severa"
+        elif 16<=imc<17:
+            categorizacion="Infrapeso: Delgadez moderada"
+        elif 17<=imc<18.5:
+            categorizacion="Infrapeso: Delgadez aceptable"
+        elif 18.5<=imc<25:
+            categorizacion="Peso nomral"
+        elif 25<=imc<30:
+            categorizacion="Sobrepeso"
+        elif 30<=imc<35:
+            categorizacion="Obeso: Tipo I"
+        elif 35<=imc<40:
+            categorizacion="Obeso: Tipo II"
+        elif 40<=imc:
+            categorizacion="Obeso: Tipo III"
                 
         nombres.append(nombre)
         edades.append(edad)
         pesos.append(peso)
         estaturas.append(estatura)
-        imc_usuarios.append(round((peso/estatura**2)))
+        imc_usuarios.append(round(imc))
+        clasificacion_usuarios.append(categorizacion)
         
         input(f"Usuario {nombre} ingresado correctamente\nPresiona ENTER para continuar")
     elif (control_principal==2): # Hacer que el menu se actualice en tiempo real! dejo como pendiente ya no quiero hacer mas
@@ -189,11 +210,19 @@ while True:
     elif (control_principal==3):
         print("En construcción")
     elif (control_principal==4):
-        print(nombres)
-        print(edades)
-        print(pesos)
-        print(estaturas)
-        
+        os.system("cls")
+        cantidad_usuarios = len(nombres)
+        if cantidad_usuarios>0:
+            for usuario in range(cantidad_usuarios):
+                print(f"""|---------------------------------------------------------------------------|
+Usuario: {nombres[usuario]}
+Edad: {edades[usuario]} - Peso: {pesos[usuario]} - Altura: {estaturas[usuario]}
+IMC: {imc_usuarios[usuario]} - Categorización: {clasificacion_usuarios[usuario]}
+|---------------------------------------------------------------------------|
+""")
+        else:
+            print("ERROR! No hay usuarios registrados")
+            
         input(f"\nENTER para continuar")
     elif (control_principal==5):
         break
