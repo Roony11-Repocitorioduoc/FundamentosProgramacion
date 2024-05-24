@@ -2,6 +2,7 @@ import os
 import time
 
 # Listas 
+id_usuarios = []
 nombres = []
 edades = []
 pesos = []
@@ -13,6 +14,7 @@ edadminima = 0
 index = 0
 cantidad_usuarios = 0
 ## Usuarios
+id = 0
 nombre = ""
 nombre_old = ""
 edad = 0
@@ -30,7 +32,7 @@ control_estadisticas = 0
 control_borrar = 0
 # Strings
 ## Textos a usuario
-mensaje_valueerror = "ERROR, Ingresa un número entero"
+mensaje_valueerror = "ERROR, Ingresa un número"
 mensaje_outindex = "ERROR, Ingresa un número entre las opciones del menú"
 ## Menú principal
 menu_principal = f"""Menú principal
@@ -74,10 +76,10 @@ while True:
         while True:
             nombre = str(input(f"Ingresa el nombre del usuario\n")).lower().strip()
             if (len(nombre)>0):
-                if (nombres.count(nombre)==0):
-                    break
-                else:
-                    print("ERROR, Ya existe este usuario!")
+                #if (nombres.count(nombre)==0):
+                break
+                #else:
+                #    print("ERROR, Ya existe este usuario!")
             else:
                 print("Ingresa un nombre valido!")
          
@@ -132,7 +134,14 @@ while True:
             categorizacion="Obeso: Tipo II"
         elif 40<=imc:
             categorizacion="Obeso: Tipo III"
-                
+        
+        # Carga de datos
+
+        #if (len(id_usuarios)==0):
+        #    id_usuarios.append(0)
+        #else:
+        id_usuarios.append(len(id_usuarios))
+
         nombres.append(nombre)
         edades.append(edad)
         pesos.append(peso)
@@ -140,20 +149,32 @@ while True:
         imc_usuarios.append(round(imc))
         clasificacion_usuarios.append(categorizacion)
         
-        input(f"Usuario {nombre} ingresado correctamente\nPresiona ENTER para continuar")
+        input(f"Usuario {nombre} ingresado correctamente\nTu ID es {len(id_usuarios)-1}\nPresiona ENTER para continuar")
     elif (control_principal==2):
         control_modificacion=0
         os.system("cls")
         
         while True:
-            nombre = str(input(f"Ingresa el nombre del usuario\n")).lower().strip()
-            if (nombres.count(nombre)>0):
-                index = nombres.index(nombre)
-                nombre_old = nombre
-                break
-            else:
-                print("ERROR, Este usuario no existe!")
-                time.sleep(1)     
+            os.system("cls")
+            #nombre = str(input(f"Ingresa el nombre del usuario\n")).lower().strip()
+            try:
+                id = int(input(f"Ingresa el ID del usuario (0 - {len(id_usuarios)-1})\n"))
+                if (id<=len(id_usuarios)):
+                    index = id_usuarios.index(id)
+                    break
+                else:
+                    print("ERROR, Ingresa una ID valido!")
+            except:
+                print(mensaje_valueerror)
+                time.sleep(1) 
+
+            #if (nombres.count(nombre)>0):
+            #    index = nombres.index(nombre)
+            #    nombre_old = nombre
+            #    break
+            #else:
+            #    print("ERROR, Este usuario no existe!")
+            #    time.sleep(1)     
 
         while True:
             while True: # bucle menú
@@ -161,6 +182,7 @@ while True:
                     os.system("cls")
                     control_modificacion = int(input(f"""Modificar usuario
     Selecciona que aspecto deseas modificar (1-5)
+    ID: {id_usuarios[index]}
     1. Nombre [ACTUAL: {nombres[index]}]
     2. Edad [ACTUAL: {edades[index]}]
     3. Peso [ACTUAL: {pesos[index]}]
@@ -183,15 +205,15 @@ while True:
             if (control_modificacion==1): # cambio de nombre
                 os.system("cls")
                 nombre = str(input(f"Ingresa el nombre que deseas colocarle al usuario. ACTUAL: {nombres[index]}\n")).lower().strip()
-                
-                if (nombres.count(nombre)>0):
-                    print("ERROR, Ya existe ese usuario!")
-                    time.sleep(1)
-                else:
-                    nombres.pop(index)
-                    nombres.insert(index, nombre)
-                    print(f"El usuario {nombre_old} se a cambiado satisfactoriamente a {nombre}")
-                    time.sleep(1)    
+                nombre_old = nombres[index]
+                #if (nombres.count(nombre)>0):
+                #    print("ERROR, Ya existe ese usuario!")
+                #    time.sleep(1)
+                #else:
+                nombres.pop(index)
+                nombres.insert(index, nombre)
+                print(f"El usuario {nombre_old} se a cambiado satisfactoriamente a {nombre}")
+                time.sleep(1)    
             elif (control_modificacion==2): # cambio de edad
                 os.system("cls")
                 
@@ -324,19 +346,23 @@ while True:
     elif (control_principal==3): # Borrar usuario
         while True:
             os.system("cls")
-            nombre = str(input(f"Ingresa el nombre del usuario\n")).lower().strip()
-            if (nombres.count(nombre)>0):
-                index = nombres.index(nombre)
-                break
-            else:
-                print("ERROR, Este usuario no existe!")
-                time.sleep(1)
+            #nombre = str(input(f"Ingresa el nombre del usuario\n")).lower().strip()
+            try:
+                id = int(input(f"Ingresa el ID del usuario (0 - {len(id_usuarios)})\n"))
+                if (id<=len(id_usuarios)):
+                    index = id_usuarios.index(id)
+                    break
+                else:
+                    print("ERROR, Ingresa una ID valido!")
+            except:
+                print(mensaje_valueerror)
+                time.sleep(1) 
         
         while True:
             try:
                 os.system("cls")
                 control_borrar = int(input(f"""Menú borrar usuario
-Desea borrar al usuario {nombres[index]} (1-2)
+Desea borrar al usuario {nombres[index]} ID: {id_usuarios[index]} (1-2)
 1. Si
 2. No
 """))
@@ -352,12 +378,17 @@ Desea borrar al usuario {nombres[index]} (1-2)
         if (control_borrar==1):
             nombre_old = nombres[index]
 
+
+            id_usuarios.pop(index)
             nombres.pop(index)
             edades.pop(index)
             pesos.pop(index)
             estaturas.pop(index)
             imc_usuarios.pop(index)
             clasificacion_usuarios.pop(index)
+
+            for index in range(len(id_usuarios)):
+                id_usuarios[index] -= 1
 
             print(f"Se ha eliminado exitosamente el usuario {nombre_old}")
         else:
@@ -386,24 +417,27 @@ Desea borrar al usuario {nombres[index]} (1-2)
                 if cantidad_usuarios>0:
                     os.system("cls")
                     for usuario in range(cantidad_usuarios):
-                        print(f"{usuario+1}. {nombres[usuario]}")
+                        print(f"ID: {usuario} - USUARIO: {nombres[usuario]}")
                 else:
                     print("No hay usuarios registrados!")
 
             elif (control_estadisticas==2): # Ver estadísticas de un usuario
                 while True:
-                    os.system("cls")
-                    nombre = str(input(f"Ingresa el nombre del usuario\n")).lower().strip()
-                    if (nombres.count(nombre)>0):
-                        index = nombres.index(nombre)
-                        break
-                    else:
-                        print("ERROR, Este usuario no existe!")
-                        time.sleep(1)   
+                    #nombre = str(input(f"Ingresa el nombre del usuario\n")).lower().strip()
+                    try:
+                        id = int(input(f"Ingresa el ID del usuario (0 - {len(id_usuarios)}\n"))
+                        if (id<=len(id_usuarios)):
+                            index = id_usuarios.index(id)
+                            break
+                        else:
+                            print("ERROR, Ingresa una ID valido!")
+                    except:
+                        print(mensaje_valueerror)
+                        time.sleep(1)  
                         
                 os.system("cls")
                 print(f"""|---------------------------------------------------------------------------|
-Usuario: {nombres[index]}
+Usuario: {nombres[index]} - ID: {id_usuarios[index]}
 Edad: {edades[index]} - Peso: {pesos[index]} - Altura: {estaturas[index]}
 IMC: {imc_usuarios[index]} - Categorización: {clasificacion_usuarios[index]}
 |---------------------------------------------------------------------------|
