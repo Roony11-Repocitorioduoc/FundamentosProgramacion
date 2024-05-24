@@ -1,5 +1,6 @@
 import time
 import os
+import validar
     
 def mostrar(variableint, lista):
     os.system("cls")
@@ -8,15 +9,11 @@ def mostrar(variableint, lista):
     print(f"0.- Salir\n")
     
     while True:
-        try:
-            variableint = int(input(f"Ingresa tu opción (0 - {len(lista)})\n"))
-            if (0<=variableint<=len(lista)):
-                return variableint
-                break
-            else:
-                print("Ingresa un valor dentro de los rangos del menú")
-                time.sleep(1)
-        except:
-            print("Ingresa un número entero!")
+        variableint = validar.entero(variableint, f"Ingresa tu opción (0 - {len(lista)})\n")
+
+        if (0<=variableint<=len(lista)):
+            return variableint
+        else:
+            print("Ingresa un valor dentro de los rangos del menú")
             time.sleep(1)
     
