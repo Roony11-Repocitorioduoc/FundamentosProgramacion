@@ -2,7 +2,8 @@ import time
 import os
 import validar
     
-def mostrar(variableint, lista):
+def mostrar(lista):
+    variableint = 0
     os.system("cls")
     for item in range(len(lista)):
         print(f"{item+1}.- {lista[item]}")

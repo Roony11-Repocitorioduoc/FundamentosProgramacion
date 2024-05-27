@@ -10,12 +10,14 @@ control = 0
 control_principal = 0
 
 while True:
-    control_principal = menu.mostrar(control, menu_principal)
+    control_principal = menu.mostrar(menu_principal)
     
     if (control_principal==0):
         break
+    
     elif (control_principal==1):
        notas.cargar(lista_notas)
+
     elif (control_principal==2):
         menu.mostrar(control, lista_notas)
         
