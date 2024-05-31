@@ -13,10 +13,11 @@ edad = 0
 carrera = ""
 # Menú
 control = 0
+identificacion = 0
 
 while True:
     os.system("cls")
-    print(f"Menú ingreso\n1. Ingresar usuario\n2. Mostrar la lista\n3. Salir\n")
+    print(f"Menú ingreso\n1. Ingresar usuario\n2. Mostrar la lista\n3. Buscar por ID\n4. Salir\n")
     
     control = int(input(f"Ingresa tu opción\n"))
     
@@ -47,6 +48,15 @@ while True:
         
         input(f"\nENTER\n")
     elif control==3:
+        identificacion = int(input(f"Ingresa el ID a buscar - (1 - {len(lista)})\n"))
+        
+        print(f"ID - {identificacion}")
+        for k, v in lista[identificacion-1].items():
+            print(f"{k} - {v}")
+        
+        input(f"\nENTER\n")
+            
+    elif control==4:
         break
 
 
