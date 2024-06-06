@@ -1,0 +1,35 @@
+{
+   "Nombre de la Línea": [
+        "Línea 1", "Línea 1", "Línea 1", "Línea 1", "Línea 1", "Línea 1", "Línea 1", "Línea 1", 
+        "Línea 1", "Línea 1", "Línea 1", "Línea 1", "Línea 1", "Línea 1", 
+        "Línea 2", "Línea 2", "Línea 2", "Línea 2", "Línea 2", "Línea 2", "Línea 2", "Línea 2", 
+        "Línea 2", "Línea 2", 
+        "Línea 3", "Línea 3", "Línea 3", "Línea 3", "Línea 3", 
+        "Línea 4", "Línea 4", "Línea 4", 
+        "Línea 4A", "Línea 4A", 
+        "Línea 5", "Línea 5", "Línea 5", 
+        "Línea 6", "Línea 6", "Línea 6", "Línea 6"
+    ],
+    "Nombre de la Estación": [
+        "San Pablo", "Neptuno", "Pajaritos", "Las Rejas", "Ecuador", "San Alberto Hurtado", "Universidad de Santiago", "Estación Central",
+        "Universidad de Chile", "La Moneda", "Los Héroes", "República", "Unión Latinoamericana", "La Moneda",
+        "Vespucio Norte", "Zapadores", "Dorsal", "Einstein", "Cementerios", "Cerro Blanco", "Patronato", "Puente Cal y Canto",
+        "Santa Ana", "Los Héroes",
+        "Fernando Castillo Velasco", "Plaza Egaña", "Chile España", "Irarrázaval", "Matta",
+        "Tobalaba", "Colón", "Los Domínicos",
+        "La Cisterna", "San Ramón",
+        "Plaza de Maipú", "Santiago Bueras", "Del Sol",
+        "Cerrillos", "Lo Valledor", "Franklin", "Inés de Suárez"
+    ],
+    "Comuna": [
+        "Lo Prado", "Lo Prado", "Estación Central", "Estación Central", "Estación Central", "Estación Central", "Estación Central", "Estación Central",
+        "Santiago", "Santiago", "Santiago", "Santiago", "Santiago", "Santiago",
+        "Huechuraba", "Recoleta", "Recoleta", "Recoleta", "Recoleta", "Recoleta", "Recoleta", "Santiago",
+        "Santiago", "Santiago",
+        "La Reina", "Ñuñoa", "Ñuñoa", "Ñuñoa", "Santiago",
+        "Providencia", "Las Condes", "Las Condes",
+        "La Cisterna", "San Ramón",
+        "Maipú", "Maipú", "Maipú",
+        "Cerrillos", "Pedro Aguirre Cerda", "Santiago", "Providencia"
+    ]
+}

@@ -39,6 +39,7 @@ while True:
         #for fila in lista:
         #    print(fila)
         
+        # Acceder a cada elemento de los diccionarios guardados en la lista
         for i in range(len(lista)):
             for k, v in lista[i].items():
                 print(f"{k} - {v}")

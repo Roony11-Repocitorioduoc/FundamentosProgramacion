@@ -1,0 +1,28 @@
+Trabajador - ricardo
+Cargo - CEO
+Sueldo Bruto - 12345
+Descuento Salud - 864
+Descuento AFP - 1481
+Sueldo liquido - 9999
+---
+Trabajador - ricardo
+Cargo - CEO
+Sueldo Bruto - 1234
+Descuento Salud - 86
+Descuento AFP - 148
+Sueldo liquido - 1000
+---
+Trabajador - javier
+Cargo - CEO
+Sueldo Bruto - 1234
+Descuento Salud - 86
+Descuento AFP - 148
+Sueldo liquido - 1000
+---
+---
+Trabajador - marco
+Cargo - CEO
+Sueldo Bruto - 1234
+Descuento Salud - 86
+Descuento AFP - 148
+Sueldo liquido - 1000
