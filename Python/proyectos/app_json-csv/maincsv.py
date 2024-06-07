@@ -56,7 +56,7 @@ with open("usuarios_ficticios.csv", "r", encoding="utf-8") as archivo:
             "peso" : peso,
             "estatura" : estatura,
             "imc" : round(lista_imc[i]),
-            "categorizacion" : lista_carac[i]
+            "categorización" : lista_carac[i]
         }
         
         lista_dict.append(dict)
@@ -69,4 +69,4 @@ with open("usuarios_ficticios.csv", "r", encoding="utf-8") as archivo:
 
 with open("usuarios_ficticios.json", "w", encoding="utf-8") as archivo:
     # Escribimos los diccionarios en un json
-    json.dump(lista_dict, archivo, indent=4)
+    json.dump(lista_dict, archivo, indent=4, ensure_ascii=False)
