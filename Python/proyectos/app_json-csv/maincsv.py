@@ -62,6 +62,10 @@ with open("usuarios_ficticios.csv", "r", encoding="utf-8") as archivo:
         lista_dict.append(dict)
         
         i+=1
+    
+    # Limpiamos listas temporales de datos
+    lista_carac.clear()
+    lista_imc.clear()
 
 with open("usuarios_ficticios.json", "w", encoding="utf-8") as archivo:
     # Escribimos los diccionarios en un json
