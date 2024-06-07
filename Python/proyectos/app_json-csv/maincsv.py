@@ -69,5 +69,4 @@ with open("usuarios_ficticios.csv", "r", encoding="utf-8") as archivo:
 
 with open("usuarios_ficticios.json", "w", encoding="utf-8") as archivo:
     # Escribimos los diccionarios en un json
-    for i in range(len(lista_dict)):
-        json.dump(lista_dict, archivo, indent=4)
+    json.dump(lista_dict, archivo, indent=4)
