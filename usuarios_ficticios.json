@@ -1,0 +1,121 @@
+{
+    "nombre": "Mickey Mouse",
+    "peso": 75,
+    "estatura": 1.51,
+    "imc": 33,
+    "categorizacion": "Obeso: Tipo I"
+}{
+    "nombre": "Donald Duck",
+    "peso": 51,
+    "estatura": 1.98,
+    "imc": 13,
+    "categorizacion": "Infrapeso: Delgadez severa"
+}{
+    "nombre": "SpongeBob SquarePants",
+    "peso": 68,
+    "estatura": 1.67,
+    "imc": 24,
+    "categorizacion": "Peso nomral"
+}{
+    "nombre": "Homer Simpson",
+    "peso": 85,
+    "estatura": 1.63,
+    "imc": 32,
+    "categorizacion": "Obeso: Tipo I"
+}{
+    "nombre": "Bart Simpson",
+    "peso": 93,
+    "estatura": 1.68,
+    "imc": 33,
+    "categorizacion": "Obeso: Tipo I"
+}{
+    "nombre": "Peter Griffin",
+    "peso": 72,
+    "estatura": 1.96,
+    "imc": 19,
+    "categorizacion": "Peso nomral"
+}{
+    "nombre": "Stewie Griffin",
+    "peso": 55,
+    "estatura": 1.54,
+    "imc": 23,
+    "categorizacion": "Peso nomral"
+}{
+    "nombre": "Scooby-Doo",
+    "peso": 50,
+    "estatura": 1.51,
+    "imc": 22,
+    "categorizacion": "Peso nomral"
+}{
+    "nombre": "Shaggy Rogers",
+    "peso": 60,
+    "estatura": 1.76,
+    "imc": 19,
+    "categorizacion": "Peso nomral"
+}{
+    "nombre": "Fred Flintstone",
+    "peso": 55,
+    "estatura": 1.59,
+    "imc": 22,
+    "categorizacion": "Peso nomral"
+}{
+    "nombre": "Tom Cat",
+    "peso": 59,
+    "estatura": 1.64,
+    "imc": 22,
+    "categorizacion": "Peso nomral"
+}{
+    "nombre": "Jerry Mouse",
+    "peso": 75,
+    "estatura": 1.74,
+    "imc": 25,
+    "categorizacion": "Peso nomral"
+}{
+    "nombre": "Bugs Bunny",
+    "peso": 84,
+    "estatura": 1.67,
+    "imc": 30,
+    "categorizacion": "Obeso: Tipo I"
+}{
+    "nombre": "Daffy Duck",
+    "peso": 91,
+    "estatura": 1.9,
+    "imc": 25,
+    "categorizacion": "Sobrepeso"
+}{
+    "nombre": "Popeye",
+    "peso": 87,
+    "estatura": 1.67,
+    "imc": 31,
+    "categorizacion": "Obeso: Tipo I"
+}{
+    "nombre": "Garfield",
+    "peso": 66,
+    "estatura": 1.63,
+    "imc": 25,
+    "categorizacion": "Peso nomral"
+}{
+    "nombre": "Betty Boop",
+    "peso": 56,
+    "estatura": 1.57,
+    "imc": 23,
+    "categorizacion": "Peso nomral"
+}{
+    "nombre": "Tweety",
+    "peso": 73,
+    "estatura": 1.95,
+    "imc": 19,
+    "categorizacion": "Peso nomral"
+}{
+    "nombre": "Sylvester",
+    "peso": 69,
+    "estatura": 1.85,
+    "imc": 20,
+    "categorizacion": "Peso nomral"
+}{
+    "nombre": "Yogi Bear",
+    "peso": 88,
+    "estatura": 1.9,
+    "imc": 24,
+    "categorizacion": "Peso nomral"
+}
