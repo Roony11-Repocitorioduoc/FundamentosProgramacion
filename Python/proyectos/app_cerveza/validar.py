@@ -75,7 +75,40 @@ def cerveza(lista_estilo):
     }
 
     return cerveza
+
+def lista(lista_cerveza):
+    if len(lista_cerveza)==0:
+        print(f"No hay cervezas que listar")
+        return
+
+    for cerveza in lista_cerveza:
+        for k in cerveza.keys():
+            print(f"{k} <-> {cerveza[k]}")
+        print(f"---")
+    input("ENTER")
+
+def codigo(lista_cerveza):
+    if len(lista_cerveza)==0:
+        print(f"No hay cervezas que listar")
+        return
+
+    cantidad_cerveza = len(lista_cerveza)
+
+    codigo = ""
+
+    while len(codigo)!=3:
+        codigo = input(f"Ingresa el codigo de la cerveza a buscar").strip().upper()
+
+    # lista_cerveza guarda diccionarios
+    for cerveza in lista_cerveza:
+        for key, value in cerveza.items():
+                print(f"{key} <-> {value}")
     
+
+    input("ENTER")
+            
+
+
 
 
 

@@ -38,9 +38,9 @@ for llave, valor in datos_json.items():
 
 set_comunas = list(set(lista_comunas))
 set_lineas = list(set(lista_lineas))
-set_lineas.sort() # lineas disponibles a mostrar (usos en selección)
 set_comunas.sort() # comunas disponibles a mostrar (usos en selección)
-cantidad = len(lista_estaciones)
+set_lineas.sort() # lineas disponibles a mostrar (usos en selección)
+cantidad = len(lista_lineas)
         
 #print(lista_lineas)
 #print(lista_estaciones)
@@ -76,7 +76,3 @@ elif control==3:
     for i in range(cantidad):
         if lista_comunas[i] == set_comunas[comuna-1]:
             print(lista_lineas[i], lista_estaciones[i], lista_comunas[i])
-
-
-
-
