@@ -10,5 +10,6 @@ def entero(titulo):
             print(f"Error: {e}")
             time.sleep(1)
         
-def cambio(atributo, )
+def cambio(atributo, atributos, seleccion):
+    atributos[atributo[seleccion-1]] = input(f"Ingresa el atributo: {atributo[seleccion-1]} a cambiar\n")
     

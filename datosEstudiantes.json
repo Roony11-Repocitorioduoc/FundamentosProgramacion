@@ -1,20 +1,8 @@
 [
     {
-        "run": "ricardo",
-        "nombre": "ricardo",
-        "carrera": "ricardo",
-        "jornada": "ricardo"
-    },
-    {
-        "run": "marco",
-        "nombre": "marco",
-        "carrera": "marco",
-        "jornada": "marco"
-    },
-    {
-        "run": "ricardo1",
-        "nombre": "ricardo",
-        "carrera": "ricardo",
-        "jornada": "ricardo"
+        "run": "20953977-2",
+        "nombre": "Ricardo Sánchez",
+        "carrera": "Ing Informatica",
+        "jornada": "Diurna"
     }
 ]

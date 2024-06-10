@@ -43,6 +43,9 @@ def listar(lista_estudiantes):
     imprimir.lista_json(lista_estudiantes, "datosEstudiantes.json")
     
     input(f"\nENTER\n")
+
+def filtrar():
+    print(f"Hola mundo!") # funcion que filtra por un atributo y devuelve diccionarios con esa caracteristica en común (posiblemente se puede agregar mas de uno proximamente)
     
 def actualizar(lista_estudiantes):
     if (len(lista_estudiantes)==0):
@@ -50,19 +53,29 @@ def actualizar(lista_estudiantes):
         time.sleep(1)
         return 0
     
-    cambio = input(f"Ingresa el nombre del usuario a buscar\n")
-    
     lista_id = [] # Guarda las id de estudiantes con el mismo nombre
+    lista_atributos = [] # Guarda los atributos disponibles
+
+    for k in lista_estudiantes[0].keys():
+        lista_atributos.append(k)
+
+    seleccion = imprimir.menu(lista_atributos, False)
+    
+    cambio = input(f"Ingresa el/la {lista_atributos[seleccion-1]} del usuario a buscar\n")
     
     control = 0
     
     c=1
-    
+    os.system("cls")
     for i in range(len(lista_estudiantes)):
+        flagnumber = True
         for k, v in lista_estudiantes[i].items(): # Datos Estudiante
-            if lista_estudiantes[i]["nombre"]==cambio:
+            if flagnumber:
+                print(f"{c}.- ", end=" ")
+            if lista_estudiantes[i][lista_atributos[seleccion-1]]==cambio:
                 lista_id.append(i) # Indice de la lista guardado
-                print(f"{c}.- {k} --> {v}")
+                print(f"{k} --> {v}")
+            flagnumber = False
         print(f"---")
         c=c+1
                 
@@ -78,17 +91,13 @@ def actualizar(lista_estudiantes):
         for k, v in lista_estudiantes[lista_id[control-1]].items():
             print(f"{i+1}.- {k} --> Actual: {v}")
             i=i+1
-        print(f"{i+1}.- Salir")
+        print(f"{i+1}.- Guardar")
         
         cambiar = validar.entero(f"Selecciona lo que deseas cambiar\n")
-        
-        if cambiar==1:
-            # Run
-            run = input(f"Ingresa el run a cambiar\n")
-            
-            
-            lista_estudiantes[lista_id[control-1]]["run"] = run
-        elif cambiar==5:
+
+        if 1<=cambiar<=len(lista_atributos):
+            validar.cambio(lista_atributos, lista_estudiantes[lista_id[control-1]], cambiar)
+        elif cambiar==len(lista_atributos)+1:
             break
             
             

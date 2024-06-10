@@ -16,5 +16,3 @@ while control!=4:
         validar.lista(lista_cerveza)
     elif control==3:
         validar.codigo(lista_cerveza)
-
-
