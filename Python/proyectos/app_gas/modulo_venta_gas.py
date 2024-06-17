@@ -53,3 +53,20 @@ TOTAL MES : ${lista[k]["total_mes"]}
     
     # creara una tabla que printeara todo
     return
+
+def imprimir_csv(lista):
+    if len(lista)==0:
+        os.system("cls")
+        print(f"No hay datos que mostrar")
+        os.system("pause")
+        return
+    
+    archivo_reporte = "reporte_gas.csv"
+    
+    with open(archivo_reporte, "w", encoding="utf-8") as archivo:
+        writer = csv.writer(archivo)
+        writer.writerow(["Mes", "Valor Gas", "Cantidad Vendida", "Total Mes"])
+        
+        for k in lista:
+            fila = [k["mes"], k["valor_gas"], k["cant_vendida"], k["total_mes"]]
+            writer.writerow(lista)

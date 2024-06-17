@@ -28,7 +28,7 @@ while True:
         os.system("pause")
     elif control == 3:
         print(menu_principal[2])
-        
+        modulo_venta_gas.imprimir_csv(lista_gas)
         os.system("pause")
     elif control == 4:
         print(menu_principal[3])
