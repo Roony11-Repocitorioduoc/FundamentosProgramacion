@@ -55,7 +55,8 @@ TOTAL MES : ${lista[k]["total_mes"]}
     return
 
 def imprimir_csv(lista):
-    if len(lista)==0:
+    cantidad = len(lista)
+    if cantidad==0:
         os.system("cls")
         print(f"No hay datos que mostrar")
         os.system("pause")
@@ -67,6 +68,8 @@ def imprimir_csv(lista):
         writer = csv.writer(archivo)
         writer.writerow(["Mes", "Valor Gas", "Cantidad Vendida", "Total Mes"])
         
-        for k in lista:
-            fila = [k["mes"], k["valor_gas"], k["cant_vendida"], k["total_mes"]]
-            writer.writerow(lista)
+        for k in range(cantidad):
+            fila = [lista[k]["mes"], lista[k]["valor_gas"], lista[k]["cant_vendida"], lista[k]["total_mes"]]
+            writer.writerow(fila)
+        
+        print(f"El reporte ha sido generado en: {os.path.abspath(archivo_reporte)}")
