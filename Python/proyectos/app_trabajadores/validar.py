@@ -22,7 +22,6 @@ def decimal(titulo):
 
 def ingreso_trabajador(lista_cargos):
     cant_cargos = len(lista_cargos)
-    trabajador = {} # Dict vacio para datos del trabajador
 
     # Ingreso del nombre del trabajador
     nombre = str(input(f"Ingresa el nombre del trabajador\n")).lower().strip()

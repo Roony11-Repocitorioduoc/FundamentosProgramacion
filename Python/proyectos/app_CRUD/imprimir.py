@@ -1,18 +1,21 @@
 import os
 import time
-import validar
 import json
 
-def menu(lista_menu, salir):
+def menu(menu, titulo, salir):
     os.system("cls")
-    for i in range(len(lista_menu)):
-        print(f"{i+1}.- {lista_menu[i]}")
-        
+
+    if len(menu)==0:
+        print(f"No hay elementos que mostrar!")
+        time.sleep(1)
+        return 
+
+    print(titulo)
+    for i in range(len(menu)):
+        print(f"{i+1}.- {menu[i]}")
         # Añade X.- Salir al final del menú segun requerimiento, salir = True (Aparece)
     if salir:
-        print(f"{len(lista_menu)+1}.- Salir")
-            
-    return validar.entero(f"Ingresa la opción del menú\n")
+        print(f"{len(menu)+1}.- Salir")
 
 def lista_json(datos, nombreJson):
     with open(nombreJson, "w", encoding="utf-8") as archivo:

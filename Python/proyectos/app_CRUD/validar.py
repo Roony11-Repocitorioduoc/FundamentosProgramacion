@@ -11,5 +11,5 @@ def entero(titulo):
             time.sleep(1)
         
 def cambio(atributo, atributos, seleccion):
-    atributos[atributo[seleccion-1]] = input(f"Ingresa el atributo: {atributo[seleccion-1]} a cambiar\n")
+    atributos[atributo[seleccion-1]] = input(f"Ingresa el atributo: {atributo[seleccion-1]} a cambiar\n").lower().strip()
     
