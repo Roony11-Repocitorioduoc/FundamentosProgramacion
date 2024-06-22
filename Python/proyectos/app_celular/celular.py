@@ -123,6 +123,10 @@ def filtrar(lista_celulares):
     for k in range(len(lista_celulares)):
         if lista_celulares[k][lista_keys[llave-1]]==lista_atributos[atributo-1]:
             lista_id.append(k) # lista que guarda los id de la lista grande
+    
+    # limpieza de listas
+    lista_keys  = []
+    lista_atributos = []
 
     return lista_id
 
@@ -189,6 +193,7 @@ def reporte(lista_celulares):
     while not 1<=len(nombre):
         nombre = input(f"Ingresa el nombre del archivo\n").lower().strip()
     
+    os.system("cls")
     print(f"Que tipo de archivo deseas generar\n1. JSON\n2. CSV\n")
 
     eleccion = 0

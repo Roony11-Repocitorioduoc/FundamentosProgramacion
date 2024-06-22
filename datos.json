@@ -1,0 +1,32 @@
+[
+    {
+        "numero": "552683",
+        "marca": "optimus",
+        "modelo": "xm23",
+        "compañia": "entel"
+    },
+    {
+        "numero": "18043",
+        "marca": "optimus",
+        "modelo": "aa2",
+        "compañia": "entel"
+    },
+    {
+        "numero": "40652",
+        "marca": "supercelular",
+        "modelo": "xm23",
+        "compañia": "wom"
+    },
+    {
+        "numero": "222773",
+        "marca": "optimus",
+        "modelo": "aa1",
+        "compañia": "wom"
+    },
+    {
+        "numero": "604",
+        "marca": "supercelular",
+        "modelo": "aa1",
+        "compañia": "entel"
+    }
+]
